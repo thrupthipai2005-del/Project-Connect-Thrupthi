@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Project Connect</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            background: #fff;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(44,62,80,0.15);
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .login-container h2 {
+            margin: 0 0 1rem 0;
+            text-align: center;
+            color: #2575fc;
+            font-weight: 700;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        label {
+            font-size: 1rem;
+            color: #333;
+        }
+        input[type="email"],
+        input[type="password"] {
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s;
+        }
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #2575fc;
+        }
+        .login-btn {
+            background: #2575fc;
+            color: #fff;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .login-btn:hover {
+            background: #1a5edb;
+        }
+        .login-links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+        .login-links a {
+            color: #2575fc;
+            text-decoration: none;
+            transition: text-decoration 0.2s;
+        }
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 400px) {
+            .login-container {
+                padding: 1.5rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="login-container" autocomplete="on">
+        <h2>Sign In</h2>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <div class="login-links">
+            <a href="#">Forgot password?</a>
+            <a href="#">Sign up</a>
+        </div>
+    </form>
+</body>
+</html>
